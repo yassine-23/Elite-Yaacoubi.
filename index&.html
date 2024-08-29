@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elite Yaacoubi, when innovation meets ambition.">
+    <meta name="keywords" content="Elite Yaacoubi, innovation, engineering, logistics, management, protective equipment, civil engineering">
+    <title>Elite Yaacoubi - Innovation et Ambition</title>
+    
+    <!-- Link to the CSS file in assets/css/ -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Updated favicon to match the correct file type and path -->
+    <link rel="icon" type="image/jpeg" href="images/favicon.ico">
+    
+    <!-- External CSS and JS libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    
+    <!-- Inline styles -->
+    <style>
+        :root {
+            --navy: #001F3F;
+            --gold: #FFD700;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--navy);
+            color: var(--white);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .cta-button {
+            background-color: var(--gold);
+            color: var(--navy);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(255, 215, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 25%;
+            background-color: var(--gold);
+        }
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 1s ease-out forwards;
+        }
+
+        /* Full background image coverage */
+        .background-section {
+            background: url('images/background.png') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Center text in the background section */
+        .centered-text {
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: var(--gold);
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-navy py-4 px-6 shadow-md fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <!-- Updated logo image reference -->
+                <img src="images/logo.jpg" alt="Elite Yaacoubi Logo" class="h-12 mr-3">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link">Accueil</a>
+                <a href="#about" class="nav-link">À Propos</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#products" class="nav-link">Produits</a>
+                <a href="#values" class="nav-link">Valeurs</a>
+                <a href="#references" class="nav-link">Références</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <a href="#contact" class="cta-button px-4 py-2 rounded-full text-sm font-semibold hidden md:block">Contactez-nous</a>
+            <button class="md:hidden text-white" id="mobile-menu-button" aria-label="Toggle Mobile Menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Accueil</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">À Propos</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Services</a>
+                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Produits</a>
+                <a href="#values" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Valeurs</a>
+                <a href="#references" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Références</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section id="home">
+  <!-- Content of the home section -->
+</section>
+
+<section class="background-section">
+  <div class="interactive-content">
+    <h1 class="centered-text animate-title">Elite Yaacoubi</h1>
+    <p class="subtitle animate-subtitle">When Innovation Meets Ambition</p>
+  </div>
+</section>
+
+        <section id="about" class="py-16 bg-navy">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-12 text-center text-gold">À Propos de Nous</h2>
+                <div class="flex flex-col items-center">
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg animate-fade-in text-center max-w-3xl">
+                        <h3 class="text-3xl font-bold mb-6 text-gold">Elite Yaacoubi</h3>
+                        <p class="text-lg text-white leading-relaxed">
+                            Elite Yaacoubi est née de la vision audacieuse de professionnels chevronnés dans les domaines de l'ingénierie, de la logistique et du management. Notre mission est de redéfinir l'excellence en fournissant des solutions innovantes adaptées pour répondre et surpasser les attentes de nos clients. Notre équipe apporte des décennies d'expérience diversifiée, forgée dans les secteurs les plus exigeants de l'industrie. Cette expertise multifacette nous permet d'aborder chaque défi avec une perspective unique et innovante, garantissant des résultats exceptionnels pour nos clients.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 bg-navy">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-12 text-center text-gold">Nos Services</h2>
+                <div class="flex flex-col lg:flex-row justify-center items-center gap-16 mt-16">
+                    <!-- Service 1 -->
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auto">
+                        <h3 class="text-3xl font-semibold mb-6 text-gold text-center">Équipements de Protection Individuelle (EPI)</h3>
+                        <p class="text-white text-center mb-6">Nous proposons des équipements de protection individuelle spécifiques, avec la possibilité de les personnaliser pour répondre aux besoins uniques de chaque client, tout en assurant une sécurité optimale.</p>
+                        <div class="mt-8">
+                            <img src="images/xtt.png" alt="Équipements de Protection Individuelle" class="w-full h-auto rounded-lg object-cover">
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auto">
+                        <h3 class="text-3xl font-semibold mb-6 text-gold text-center">Travaux de Génie Civil</h3>
+                        <p class="text-white text-center mb-6">Nos experts en génie civil sont prêts à relever les défis les plus complexes, en fournissant des solutions robustes et efficaces qui respectent les normes les plus strictes du secteur.</p>
+                        <div class="mt-8">
+                            <img src="images/geni.png" alt="Travaux de Génie Civil" class="w-full h-auto rounded-lg object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </di>
+    <section id="products" class="py-16 bg-navy">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-12 text-center text-gold">Nos Produits</h2>
+            
+            <!-- Full-width Main Image -->
+            <div class="relative w-full">
+                <img src="images/pixelcut-export.jpeg" alt="Protection Gear" class="w-full h-auto mb-8">
+            </div>
+            
+            <!-- Products Section -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Helmet -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (11).jpeg" alt="Safety Helmet" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Casque de sécurité</h3>
+                    <p>Conçu pour une protection maximale, ces casques disposent de sangles réglables pour plus de confort et sont disponibles en plusieurs couleurs pour améliorer la visibilité sur le chantier.</p>
+                </div>
+                <!-- Product Helmets -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.59.jpeg" alt="Safety Helmets" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Casques de sécurité</h3>
+                    <p>Conçu pour une protection maximale, ces casques disposent de sangles réglables pour plus de confort et sont disponibles en plusieurs couleurs pour améliorer la visibilité sur le chantier.</p>
+                </div>
+                <!-- Product Safety Shoe -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (9).jpeg" alt="Safety Shoes" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Chaussures de sécurité</h3>
+                    <p>Chaussures de sécurité robustes avec embouts renforcés et semelles antidérapantes pour assurer sécurité et confort pendant toute la journée sur les chantiers.</p>
+                </div>
+                <!-- Product Safety Shoes -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (6).jpeg" alt="Safety boots" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Bottes de sécurité</h3>
+                    <p>Chaussures de sécurité robustes avec embouts renforcés et semelles antidérapantes pour assurer sécurité et confort pendant toute la journée sur les chantiers.</p>
+                </div>
+                <!-- Product Safety Shoe -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (10).jpeg" alt="Safety Shoe" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Chaussures de sécurité</h3>
+                    <p>Chaussures de sécurité robustes avec embouts renforcés et semelles antidérapantes pour assurer sécurité et confort pendant toute la journée sur les chantiers.</p>
+                </div>
+                <!-- Product Safety Gloves -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (8).jpeg" alt="Safety Gloves" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Gants de sécurité</h3>
+                    <p>Ces gants offrent une protection contre les risques mécaniques, les coupures et les abrasions, garantissant sécurité et dextérité pour la manipulation de divers matériaux.</p>
+                </div>
+                <!-- Product Ear Protection -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (7).jpeg" alt="Ear Protection" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Protection auditive</h3>
+                    <p>Essentiels dans les environnements bruyants, ces protège-oreilles réduisent l'exposition au bruit tout en offrant confort et durabilité.</p>
+                </div>
+                <!-- Product Respiratory Masks -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (4).jpeg" alt="Respiratory Face Masks" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Masques respiratoires</h3>
+                    <p>Offrent une protection contre la poussière, les fumées et autres matériaux dangereux, avec des options allant des masques jetables aux respirateurs complets pour les environnements à risque élevé.</p>
+                </div>
+                <!-- Product Protective Eyewear -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (3).jpeg" alt="Protective Eyewear" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Lunettes de protection</h3>
+                    <p>Lunettes de sécurité claires conçues pour offrir une protection complète des yeux contre les impacts frontaux et latéraux, adaptées à divers usages industriels.</p>
+                </div>
+                <!-- Product Protective Eyewear -->
+                <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                    <img src="images/WhatsApp Image 2024-08-26 at 20.09.58 (2).jpeg" alt="Masques de protection respiratoire" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                    <h3 class="text-2xl font-semibold mb-4 text-gold">Masques de protection respiratoire</h3>
+                    <p>Une gamme de masques respiratoires conçus pour offrir une protection efficace contre les particules fines, les gaz et les vapeurs nocives. Chaque modèle est conçu pour un ajustement confortable et une performance fiable, adaptée à divers environnements industriels.</p>
+                </div>
+            </div>
+        
+            <!-- Button for More Products -->
+            <div class="text-center mt-8">
+                <button id="show-more" class="text-gold font-semibold hover:underline">Plus de Produits</button>
+            </div>
+            
+            <!-- Non-Exhaustive Note -->
+            <p id="more-products-note" class="text-gold mt-4 hidden">Cette liste de produits n'est pas exhaustive. Vous pouvez obtenir ce dont vous avez besoin par notre intermédiaire et bénéficier de notre chaîne d'approvisionnement et de nos partenariats.</p>
+        </div>
+    </section>
+                    
+                    <script>
+                        document.getElementById("show-more").addEventListener("click", function() {
+                            var moreProductsNote = document.getElementById("more-products-note");
+                            moreProductsNote.classList.toggle('hidden');
+                            this.textContent = moreProductsNote.classList.contains('hidden') ? 'More Products' : 'Show Less';
+                        });
+                    </script>
+        <section id="values" class="py-16 bg-navy">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-12 text-center text-gold">Nos Valeurs</h2>
+        
+                <!-- New Value Sections with Letters -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                        <h3 class="text-3xl font-semibold mb-4 text-gold">E</h3>
+                        <p><strong>Efficacité</strong><br>Nous croyons que l’efficacité est essentielle pour atteindre nos objectifs. Nous nous efforçons de maximiser la productivité en optimisant chaque processus, ce qui nous permet de livrer des projets dans les délais et de dépasser les attentes de nos clients. Notre approche rigoureuse et méthodique garantit des résultats exceptionnels tout en minimisant les ressources utilisées.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
+                        <h3 class="text-3xl font-semibold mb-4 text-gold">L</h3>
+                        <p><strong>Leadership</strong><br>Le leadership est au cœur de notre entreprise. Nous encourageons nos équipes à prendre l’initiative, à innover, et à guider nos clients vers le succès. En favorisant un environnement où chacun peut exprimer ses idées et développer ses compétences, nous cultivons un esprit de collaboration et d’excellence qui se reflète dans chaque projet que nous entreprenons.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.4s;">
+                        <h3 class="text-3xl font-semibold mb-4 text-gold">I</h3>
+                        <p><strong>Innovation</strong><br>Nous croyons fermement en l’innovation continue pour rester à la pointe de l’industrie et fournir des solutions novatrices à nos clients. En adoptant les dernières technologies et en remettant en question les méthodes traditionnelles, nous nous assurons de toujours offrir des produits et services de pointe qui répondent aux besoins évolutifs du marché.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.6s;">
+                        <h3 class="text-3xl font-semibold mb-4 text-gold">T</h3>
+                        <p><strong>Technique</strong><br>La technique est le pilier de notre expertise. Grâce à notre maîtrise des méthodes et des technologies de pointe, nous sommes capables de résoudre les problèmes les plus complexes et de transformer les défis en opportunités. Notre engagement envers l’excellence technique nous permet de fournir des solutions précises, fiables et durables.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.8s;">
+                        <h3 class="text-3xl font-semibold mb-4 text-gold">E</h3>
+                        <p><strong>Engagement</strong><br>Nous sommes engagés envers nos clients, assurant leur satisfaction à chaque étape du projet, grâce à une communication transparente et une expertise technique. Notre dévouement à comprendre et à répondre aux besoins spécifiques de chaque client est ce qui fait notre différence, garantissant des partenariats durables et une confiance mutuelle.</p>
+                    </div>
+                </div>
+        
+                <!-- Existing Value Sections -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 1s;">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Innovation</h3>
+                        <p>Nous croyons fermement en l'innovation continue pour rester à la pointe de l'industrie et fournir des solutions novatrices à nos clients.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 1.2s;">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Qualité</h3>
+                        <p>La qualité est au cœur de tout ce que nous faisons. Nous nous engageons à offrir des produits et services qui répondent aux normes les plus élevées.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 1.4s;">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Efficacité</h3>
+                        <p>Nous nous engageons à offrir des solutions optimales à nos clients, en anticipant leurs besoins et en dépassant leurs attentes. Grâce à une expertise pointue et une communication proactive, nous garantissons des résultats exceptionnels à chaque étape du projet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="py-16 bg-transparent">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-12 text-center text-gold">Ils nous ont fait confiance</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
+                    <a href="https://www.vulmatec.com" class="bg-transparent p-6 rounded-full shadow-lg text-center text-gold hover:bg-opacity-30 transition duration-300 flex flex-col items-center justify-center">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4 border border-gray-300">
+                            <img src="images/vulmatec.jpg" alt="Vulmatec" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Vulmatec</h3>
+                    </a>
+                    <a href="https://www.rema-tiptop.com/" class="bg-transparent p-6 rounded-full shadow-lg text-center text-gold hover:bg-opacity-30 transition duration-300 flex flex-col items-center justify-center">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4 border border-gray-300">
+                            <img src="images/rema.jpg" alt="Rema Tip Top" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Rema Tip Top</h3>
+                    </a>
+                    <a href="https://www.kerix.net/fr/annuaire-entreprise/beugin-maroc" class="bg-transparent p-6 rounded-full shadow-lg text-center text-gold hover:bg-opacity-30 transition duration-300 flex flex-col items-center justify-center">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4 border border-gray-300">
+                            <img src="images/beugin.jpg" alt="Beugin Maroc" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Beugin Maroc</h3>
+                    </a>
+                    <a href="https://www.apros.com/" class="bg-transparent p-6 rounded-full shadow-lg text-center text-gold hover:bg-opacity-30 transition duration-300 flex flex-col items-center justify-center">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4 border border-gray-300">
+                            <img src="images/apros.jpg" alt="Apros" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Apros</h3>
+                    </a>
+                    <a href="https://www.colev.com/" class="bg-transparent p-6 rounded-full shadow-lg text-center text-gold hover:bg-opacity-30 transition duration-300 flex flex-col items-center justify-center">
+                        <div class="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center mb-4 border border-gray-300">
+                            <img src="images/colev.jpg" alt="Colev" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Colev</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-navy">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-12 text-center text-gold">Contactez-nous</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Adresse</h3>
+                        <p>123 Rue de l'Innovation, Casablanca, Maroc</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Téléphone</h3>
+                        <p>+212 6 12 34 56 78</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.4s;">
+                        <h3 class="text-2xl font-semibold mb-4 text-gold">Email</h3>
+                        <p>contact@eliteyaacoubi.com</p>
+                    </div>
+                </div>
+                <form action="#" method="post" class="mt-12 space-y-6 animate-fade-in" style="animation-delay: 0.6s;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" name="name" placeholder="Votre Nom" class="bg-white bg-opacity-20 p-3 rounded-lg">
+                        <input type="email" name="email" placeholder="Votre Email" class="bg-white bg-opacity-20 p-3 rounded-lg">
+                    </div>
+                    <input type="text" name="subject" placeholder="Objet" class="bg-white bg-opacity-20 p-3 rounded-lg w-full">
+                    <textarea name="message" rows="6" placeholder="Votre Message" class="bg-white bg-opacity-20 p-3 rounded-lg w-full"></textarea>
+                    <button type="submit" class="cta-button px-8 py-3 rounded-full text-lg font-semibold">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy py-6">
+        <div class="container mx-auto text-center text-white">
+            <p>&copy; 2024 Elite Yaacoubi. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const fadeInElements = document.querySelectorAll('.animate-fade-in');
+
+        fadeInElements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.remove('opacity-0');
+                element.classList.add('opacity-100');
+            }, index * 200);
+        });
+    </script>
+</body>
+</html>
