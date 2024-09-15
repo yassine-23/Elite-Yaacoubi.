@@ -106,40 +106,51 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
-    <header class="bg-navy py-4 px-6 shadow-md fixed w-full z-50">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="#" class="flex items-center">
-                <!-- Updated logo image reference -->
-                <img src="images/logo.jpg" alt="Elite Yaacoubi Logo" class="h-12 mr-3">
+    <!-- Header -->
+<header class="bg-navy py-4 px-6 shadow-md fixed w-full z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center">
+            <img src="images/logo.jpg" alt="Elite Yaacoubi Logo" class="h-12 mr-3">
+        </a>
+        <div class="hidden md:flex space-x-6 items-center">
+            <a href="#home" class="nav-link">Accueil</a>
+            <a href="#about" class="nav-link">À Propos</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#products" class="nav-link">Produits</a>
+            <a href="#values" class="nav-link">Valeurs</a>
+            <a href="#references" class="nav-link">Références</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <!-- Cart Link -->
+            <a href="#" id="nav-cart-button" class="nav-link relative">
+                Panier
+                <span id="cart-count" class="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
             </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#home" class="nav-link">Accueil</a>
-                <a href="#about" class="nav-link">À Propos</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#products" class="nav-link">Produits</a>
-                <a href="#values" class="nav-link">Valeurs</a>
-                <a href="#references" class="nav-link">Références</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <a href="#contact" class="cta-button px-4 py-2 rounded-full text-sm font-semibold hidden md:block">Contactez-nous</a>
-            <button class="md:hidden text-white" id="mobile-menu-button" aria-label="Toggle Mobile Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </nav>
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Accueil</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">À Propos</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Services</a>
-                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Produits</a>
-                <a href="#values" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Valeurs</a>
-                <a href="#references" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Références</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Contact</a>
-            </div>
         </div>
-    </header>
+        <a href="#contact" class="cta-button px-4 py-2 rounded-full text-sm font-semibold hidden md:block">Contactez-nous</a>
+        <button class="md:hidden text-white" id="mobile-menu-button" aria-label="Toggle Mobile Menu">
+            <!-- Mobile menu icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <!-- You can keep your existing SVG icon here -->
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Accueil</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">À Propos</a>
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Services</a>
+            <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Produits</a>
+            <a href="#values" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Valeurs</a>
+            <a href="#references" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Références</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Contact</a>
+            <!-- Cart Link -->
+            <a href="#" id="mobile-nav-cart-button" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gold hover:text-navy">Panier</a>
+        </div>
+    </div>
+</header>
 
     <main class="flex-grow">
         <section id="home">
@@ -192,121 +203,202 @@
         </section>
 
     </di>
-    <section id="products" class="py-16 bg-navy">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-5xl font-bold mb-12 text-center text-gold">Nos Produits</h2>
-        </div>  
-    </section>
-    <section id="personal-protective-equipment" class="py-16 bg-navy">
+     <!-- Products Section -->
+<section id="products" class="py-16 bg-navy">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-5xl font-bold mb-12 text-gold">Nos Produits</h2>
+    </div>  
+</section>
+
+<!-- Personal Protective Equipment Section -->
+<section id="personal-protective-equipment" class="py-16 bg-navy">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-5xl font-bold mb-12 text-gold">Équipement de Protection Individuelle</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Lunettes -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/glasses.jpeg" alt="Lunettes" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Lunettes</h3>
-                <p>Lunettes de protection conçues pour protéger les yeux contre les éclats, la poussière et les produits chimiques en milieu industriel.</p>
+                <img src="images/glasses.jpeg" alt="Lunettes" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Lunettes</h3>
+                <p class="mb-4">Lunettes de protection conçues pour protéger les yeux contre les éclats, la poussière et les produits chimiques en milieu industriel.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="lunettes">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="lunettes">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Masques anti-poussière -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/dust-mask.jpeg" alt="Masques anti-poussière" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Masques anti-poussière</h3>
-                <p>Masques anti-poussière offrant une protection efficace contre les particules fines tout en garantissant un confort respiratoire optimal.</p>
+                <img src="images/dust-mask.jpeg" alt="Masques anti-poussière" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Masques anti-poussière</h3>
+                <p class="mb-4">Masques anti-poussière offrant une protection efficace contre les particules fines tout en garantissant un confort respiratoire optimal.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="masques-anti-poussiere">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="masques-anti-poussiere">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Gants en cuir ou en caoutchouc -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/leather-gloves.jpeg" alt="Gants en cuir ou en caoutchouc" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Gants en cuir ou en caoutchouc</h3>
-                <p>Gants robustes en cuir ou en caoutchouc, idéals pour la protection contre les coupures, produits chimiques et risques mécaniques.</p>
+                <img src="images/leather-gloves.jpeg" alt="Gants en cuir ou en caoutchouc" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Gants en cuir ou en caoutchouc</h3>
+                <p class="mb-4">Gants robustes en cuir ou en caoutchouc, idéals pour la protection contre les coupures, produits chimiques et risques mécaniques.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="gants-cuir-caoutchouc">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="gants-cuir-caoutchouc">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Vêtements de pluie -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/rain-gear.jpeg" alt="Vêtements de pluie" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Vêtements de pluie</h3>
-                <p>Vêtements de pluie imperméables, assurant confort et protection dans des conditions météorologiques défavorables sur le chantier.</p>
-            </div>
-            
-            <!-- Product Bottes en caoutchouc -->
-            <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/rubber-boots.jpeg" alt="Bottes en caoutchouc" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Bottes en caoutchouc</h3>
-                <p>Bottes en caoutchouc robustes offrant une protection efficace contre les environnements humides et glissants, parfaites pour les chantiers.</p>
+                <img src="images/rain-gear.jpeg" alt="Vêtements de pluie" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Vêtements de pluie</h3>
+                <p class="mb-4">Vêtements de pluie imperméables, assurant confort et protection dans des conditions météorologiques défavorables sur le chantier.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="vetements-pluie">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="vetements-pluie">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Lounge anti-chute -->
+            <!-- Product Bottes en caoutchouc -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/fall-arrest-lounge.jpeg" alt="Lounge anti-chute" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Lounge anti-chute</h3>
-                <p>Dispositif de protection anti-chute ergonomique, conçu pour assurer la sécurité des travailleurs en hauteur.</p>
+                <img src="images/rubber-boots.jpeg" alt="Bottes en caoutchouc" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Bottes en caoutchouc</h3>
+                <p class="mb-4">Bottes en caoutchouc robustes offrant une protection efficace contre les environnements humides et glissants, parfaites pour les chantiers.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="bottes-caoutchouc">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="bottes-caoutchouc">Ajouter au Panier</button>
+                </div>
+            </div>
+
+            <!-- Product Longe anti-chute -->
+            <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                <img src="images/fall-arrest-lanyard.jpeg" alt="Longe anti-chute" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Longe anti-chute</h3>
+                <p class="mb-4">Dispositif de protection anti-chute ergonomique, conçu pour assurer la sécurité des travailleurs en hauteur.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="longe-anti-chute">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="longe-anti-chute">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Cordes anti-chute -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/fall-arrest-ropes.jpeg" alt="Cordes anti-chute" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cordes anti-chute</h3>
-                <p>Cordes de haute qualité pour la protection anti-chute, assurant une sécurité optimale lors des travaux en hauteur.</p>
+                <img src="images/fall-arrest-ropes.jpeg" alt="Cordes anti-chute" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Cordes anti-chute</h3>
+                <p class="mb-4">Cordes de haute qualité pour la protection anti-chute, assurant une sécurité optimale lors des travaux en hauteur.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="cordes-anti-chute">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="cordes-anti-chute">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Verres de masque -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/mask-lenses.jpeg" alt="Verres de masque" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Verres de masque</h3>
-                <p>Verres de masque robustes offrant une protection complète contre les éclats et la poussière tout en garantissant une vision claire.</p>
+                <img src="images/mask-lenses.jpeg" alt="Verres de masque" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Verres de masque</h3>
+                <p class="mb-4">Verres de masque robustes offrant une protection complète contre les éclats et la poussière tout en garantissant une vision claire.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="verres-masque">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="verres-masque">Ajouter au Panier</button>
+                </div>
             </div>
-            
+
             <!-- Product Blouse de travail -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/work-blouse.jpeg" alt="Blouse de travail" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Blouse de travail</h3>
-                <p>Blouse de travail durable et résistante, idéale pour protéger les vêtements et la peau dans les environnements industriels.</p>
+                <img src="images/work-blouse.jpeg" alt="Blouse de travail" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Blouse de travail</h3>
+                <p class="mb-4">Blouse de travail durable et résistante, idéale pour protéger les vêtements et la peau dans les environnements industriels.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="blouse-travail">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="blouse-travail">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Casque chantier -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/construction-helmet.jpeg" alt="Casque chantier" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Casque chantier</h3>
-                <p>Casque de chantier conçu pour protéger la tête contre les chocs et les objets en chute dans les environnements de construction.</p>
+                <img src="images/construction-helmet.jpeg" alt="Casque chantier" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Casque chantier</h3>
+                <p class="mb-4">Casque de chantier conçu pour protéger la tête contre les chocs et les objets en chute dans les environnements de construction.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="casque-chantier">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="casque-chantier">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chaussures de sécurité -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/safety-shoes.jpeg" alt="Chaussures de sécurité" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chaussures de sécurité</h3>
-                <p>Chaussures de sécurité robustes, équipées d’embouts renforcés et de semelles antidérapantes pour une protection maximale.</p>
+                <img src="images/safety-shoes.jpeg" alt="Chaussures de sécurité" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chaussures de sécurité</h3>
+                <p class="mb-4">Chaussures de sécurité robustes, équipées d’embouts renforcés et de semelles antidérapantes pour une protection maximale.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="chaussures-securite">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chaussures-securite">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Harnais -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/harness.jpeg" alt="Harnais" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Harnais</h3>
-                <p>Harnais de sécurité conçu pour offrir une protection maximale lors des travaux en hauteur et garantir la stabilité des utilisateurs.</p>
+                <img src="images/harness.jpeg" alt="Harnais" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Harnais</h3>
+                <p class="mb-4">Harnais de sécurité conçu pour offrir une protection maximale lors des travaux en hauteur et garantir la stabilité des utilisateurs.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="harnais">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="harnais">Ajouter au Panier</button>
+                </div>
             </div>
+
             <!-- Product Manchettes de soudage -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/welding-sleeves.jpeg" alt="Manchettes de soudage" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Manchettes de soudage</h3>
-                <p>Manchettes de soudage en cuir, conçues pour protéger les bras des travailleurs contre la chaleur, les étincelles et les projections.</p>
+                <img src="images/welding-sleeves.jpeg" alt="Manchettes de soudage" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Manchettes de soudage</h3>
+                <p class="mb-4">Manchettes de soudage en cuir, conçues pour protéger les bras des travailleurs contre la chaleur, les étincelles et les projections.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="manchettes-soudage">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="manchettes-soudage">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Casques visuels -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/visual-helmets.jpeg" alt="Casques visuels" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Casques visuels</h3>
-                <p>Casques visuels de haute qualité, dotés de visières protectrices pour une vision claire et une protection contre les impacts.</p>
+                <img src="images/visual-helmets.jpeg" alt="Casques visuels" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Casques visuels</h3>
+                <p class="mb-4">Casques visuels de haute qualité, dotés de visières protectrices pour une vision claire et une protection contre les impacts.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="casques-visuels">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="casques-visuels">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Extincteurs CO2 -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/co2-fire-extinguisher.jpeg" alt="Extincteurs CO2" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Extincteurs CO2</h3>
-                <p>Extincteurs CO2 pour la protection contre les incendies, particulièrement efficaces pour les feux électriques et liquides inflammables.</p>
+                <img src="images/co2-fire-extinguisher.jpeg" alt="Extincteurs CO2" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Extincteurs CO2</h3>
+                <p class="mb-4">Extincteurs CO2 pour la protection contre les incendies, particulièrement efficaces pour les feux électriques et liquides inflammables.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="extincteurs-co2">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="extincteurs-co2">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Abrasive Tools Section -->
 <section id="abrasive-tools" class="py-16 bg-navy">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-5xl font-bold mb-12 text-gold">Abrasif</h2>
@@ -314,82 +406,139 @@
             <!-- Product Disque à tronçonner et à ébarber -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/cutting-deburring-disc.jpeg" alt="Disque à tronçonner et à ébarber" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Disque à tronçonner et à ébarber</h3>
-                <p>Disques robustes pour la découpe et l'ébarbage de divers matériaux, garantissant précision et efficacité dans les applications industrielles.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Disque à tronçonner et à ébarber</h3>
+                <p class="mb-4">Disques robustes pour la découpe et l'ébarbage de divers matériaux, garantissant précision et efficacité dans les applications industrielles.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="disque-tronconner-ebarber">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="disque-tronconner-ebarber">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Disque à lamelle -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/flap-disc.jpeg" alt="Disque à lamelle" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Disque à lamelle</h3>
-                <p>Disques à lamelles polyvalents, parfaits pour le ponçage, le meulage et le polissage de surfaces métalliques et autres matériaux durs.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Disque à lamelle</h3>
+                <p class="mb-4">Disques à lamelles polyvalents, parfaits pour le ponçage, le meulage et le polissage de surfaces métalliques et autres matériaux durs.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="disque-lamelle">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="disque-lamelle">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Papier abrasif -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/abrasive-paper.jpeg" alt="Papier abrasif" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Papier abrasif</h3>
-                <p>Papier abrasif de haute qualité, conçu pour le ponçage et la finition de surfaces en bois, métal, et autres matériaux.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Papier abrasif</h3>
+                <p class="mb-4">Papier abrasif de haute qualité, conçu pour le ponçage et la finition de surfaces en bois, métal, et autres matériaux.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="papier-abrasif">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="papier-abrasif">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Bande abrasif -->
+            <!-- Product Bande abrasive -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/abrasive-belt.jpeg" alt="Bande abrasif" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Bande abrasif</h3>
-                <p>Bandes abrasives durables et résistantes, idéales pour le meulage et le polissage de surfaces rugueuses.</p>
+                <img src="images/abrasive-belt.jpeg" alt="Bande abrasive" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Bande abrasive</h3>
+                <p class="mb-4">Bandes abrasives durables et résistantes, idéales pour le meulage et le polissage de surfaces rugueuses.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="bande-abrasive">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="bande-abrasive">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Disque diamant à couper et à ébarber pour béton/marbre/asphalt -->
+            <!-- Product Disque diamant à couper et à ébarber -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/diamond-disc-concrete.jpeg" alt="Disque diamant à couper et à ébarber" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Disque diamant à couper et à ébarber</h3>
-                <p>Disque diamant de haute qualité, conçu pour couper et ébarber efficacement le béton, le marbre et l’asphalte.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Disque diamant à couper et à ébarber</h3>
+                <p class="mb-4">Disque diamant de haute qualité, conçu pour couper et ébarber efficacement le béton, le marbre et l’asphalte.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="disque-diamant">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="disque-diamant">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Toile emri -->
+            <!-- Product Toile émeri -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/emery-cloth.jpeg" alt="Toile emri" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Toile emri</h3>
-                <p>Toile emri robuste, idéale pour polir et nettoyer les surfaces métalliques, offrant une finition lisse et sans rayures.</p>
+                <img src="images/emery-cloth.jpeg" alt="Toile émeri" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Toile émeri</h3>
+                <p class="mb-4">Toile émeri robuste, idéale pour polir et nettoyer les surfaces métalliques, offrant une finition lisse et sans rayures.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="toile-emeri">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="toile-emeri">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Pierre à meule -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/grinding-stone.jpeg" alt="Pierre à meule" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Pierre à meule</h3>
-                <p>Pierre à meule de haute qualité, utilisée pour affûter et polir des outils et autres surfaces métalliques.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Pierre à meule</h3>
+                <p class="mb-4">Pierre à meule de haute qualité, utilisée pour affûter et polir des outils et autres surfaces métalliques.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="pierre-meule">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="pierre-meule">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Meule sur tige -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/rod-mounted-grinding-wheel.jpeg" alt="Meule sur tige" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Meule sur tige</h3>
-                <p>Meule sur tige pour un meulage de précision dans des endroits difficiles d'accès, adaptée aux travaux détaillés.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Meule sur tige</h3>
+                <p class="mb-4">Meule sur tige pour un meulage de précision dans des endroits difficiles d'accès, adaptée aux travaux détaillés.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="meule-tige">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="meule-tige">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Roue à lamelle -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/flap-wheel.jpeg" alt="Roue à lamelle" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Roue à lamelle</h3>
-                <p>Roues à lamelles efficaces pour le ponçage et le meulage des surfaces complexes, assurant une finition homogène.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Roue à lamelle</h3>
+                <p class="mb-4">Roues à lamelles efficaces pour le ponçage et le meulage des surfaces complexes, assurant une finition homogène.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="roue-lamelle">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="roue-lamelle">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Brosse métallique -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/metal-brush.jpeg" alt="Brosse métallique" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Brosse métallique</h3>
-                <p>Brosse métallique résistante, parfaite pour le nettoyage des surfaces rouillées et pour enlever la peinture et les débris.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Brosse métallique</h3>
+                <p class="mb-4">Brosse métallique résistante, parfaite pour le nettoyage des surfaces rouillées et pour enlever la peinture et les débris.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="brosse-metallique">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="brosse-metallique">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Forêt de carotteuse -->
+            <!-- Product Foret de carotteuse -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/core-drill-bit.jpeg" alt="Forêt de carotteuse" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Forêt de carotteuse</h3>
-                <p>Forets de carotteuse conçus pour le perçage de précision dans des matériaux tels que le béton et les pierres dures.</p>
+                <img src="images/core-drill-bit.jpeg" alt="Foret de carotteuse" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Foret de carotteuse</h3>
+                <p class="mb-4">Forets de carotteuse conçus pour le perçage de précision dans des matériaux tels que le béton et les pierres dures.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="foret-carotteuse">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="foret-carotteuse">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Tools Section -->
 <section id="tools" class="py-16 bg-navy">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-5xl font-bold mb-12 text-gold">Outillages</h2>
@@ -397,168 +546,337 @@
             <!-- Product Outillage de construction à main -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/hand-construction-tools.jpeg" alt="Outillage de construction à main" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Outillage de construction à main</h3>
-                <p>Outillage de construction manuel robuste, incluant marteaux, tournevis, pinces et autres outils essentiels pour les chantiers.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Outillage de construction à main</h3>
+                <p class="mb-4">Outillage de construction manuel robuste, incluant marteaux, tournevis, pinces et autres outils essentiels pour les chantiers.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="outillage-construction-main">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="outillage-construction-main">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chandelles de mécanicien -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/mechanic-stands.jpeg" alt="Chandelles de mécanicien" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chandelles de mécanicien</h3>
-                <p>Chandelles de mécanicien robustes, conçues pour stabiliser les véhicules pendant les travaux d'entretien et de réparation.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chandelles de mécanicien</h3>
+                <p class="mb-4">Chandelles de mécanicien robustes, conçues pour stabiliser les véhicules pendant les travaux d'entretien et de réparation.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="chandelles-mecanicien">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chandelles-mecanicien">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Presses hydrauliques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/hydraulic-presses.jpeg" alt="Presses hydrauliques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Presses hydrauliques</h3>
-                <p>Presses hydrauliques puissantes, idéales pour le pressage, le pliage et le façonnage des métaux dans les ateliers mécaniques.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Presses hydrauliques</h3>
+                <p class="mb-4">Presses hydrauliques puissantes, idéales pour le pressage, le pliage et le façonnage des métaux dans les ateliers mécaniques.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="presses-hydrauliques">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="presses-hydrauliques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Cric rouleurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/rolling-jacks.jpeg" alt="Cric rouleurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cric rouleurs</h3>
-                <p>Cric rouleur mobile avec capacité de levage élevée, conçu pour soulever facilement des véhicules en toute sécurité.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Cric rouleurs</h3>
+                <p class="mb-4">Cric rouleur mobile avec capacité de levage élevée, conçu pour soulever facilement des véhicules en toute sécurité.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="cric-rouleurs">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="cric-rouleurs">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Vérins hydrauliques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
                 <img src="images/hydraulic-cylinders.jpeg" alt="Vérins hydrauliques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Vérins hydrauliques</h3>
-                <p>Vérins hydrauliques pour le levage de charges lourdes, utilisés dans les chantiers de construction et la maintenance industrielle.</p>
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Vérins hydrauliques</h3>
+                <p class="mb-4">Vérins hydrauliques pour le levage de charges lourdes, utilisés dans les chantiers de construction et la maintenance industrielle.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="verins-hydrauliques">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="verins-hydrauliques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Cric bouteille -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/bottle-jacks.jpeg" alt="Cric bouteille" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cric bouteille</h3>
-                <p>Cric bouteille compact, puissant et facile à utiliser, idéal pour le levage de véhicules lourds et l'entretien automobile.</p>
+                <img src="images/bottle-jacks.jpeg" alt="Cric bouteille" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Cric bouteille</h3>
+                <p class="mb-4">Cric bouteille compact, puissant et facile à utiliser, idéal pour le levage de véhicules lourds et l'entretien automobile.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="cric-bouteille">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="cric-bouteille">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Vérins de fosse -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/pit-jacks.jpeg" alt="Vérins de fosse" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Vérins de fosse</h3>
-                <p>Vérins de fosse robustes, conçus pour soulever et abaisser en toute sécurité des véhicules lourds dans les ateliers de mécanique.</p>
+                <img src="images/pit-jacks.jpeg" alt="Vérins de fosse" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Vérins de fosse</h3>
+                <p class="mb-4">Vérins de fosse robustes, conçus pour soulever et abaisser en toute sécurité des véhicules lourds dans les ateliers de mécanique.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="verins-fosse">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="verins-fosse">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Cric à crémaillère -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/rack-jacks.jpeg" alt="Cric à crémaillère" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cric à crémaillère</h3>
-                <p>Cric à crémaillère solide et fiable, conçu pour soulever des charges lourdes dans des conditions exigeantes sur les chantiers.</p>
+                <img src="images/rack-jacks.jpeg" alt="Cric à crémaillère" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Cric à crémaillère</h3>
+                <p class="mb-4">Cric à crémaillère solide et fiable, conçu pour soulever des charges lourdes dans des conditions exigeantes sur les chantiers.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="cric-cremaillere">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="cric-cremaillere">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Grues hydrauliques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/hydraulic-cranes.jpeg" alt="Grues hydrauliques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Grues hydrauliques</h3>
-                <p>Grues hydrauliques robustes pour le levage et le transport de charges lourdes dans les environnements industriels et de construction.</p>
+                <img src="images/hydraulic-cranes.jpeg" alt="Grues hydrauliques" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Grues hydrauliques</h3>
+                <p class="mb-4">Grues hydrauliques robustes pour le levage et le transport de charges lourdes dans les environnements industriels et de construction.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="grues-hydrauliques">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="grues-hydrauliques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Table de mécanicien -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/mechanics-table.jpeg" alt="Table de mécanicien" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Table de mécanicien</h3>
-                <p>Table de mécanicien durable et fonctionnelle, offrant un espace de travail ergonomique pour les réparations et l'entretien mécanique.</p>
+                <img src="images/mechanics-table.jpeg" alt="Table de mécanicien" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Table de mécanicien</h3>
+                <p class="mb-4">Table de mécanicien durable et fonctionnelle, offrant un espace de travail ergonomique pour les réparations et l'entretien mécanique.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="table-mecanicien">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="table-mecanicien">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Aspirateurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/vacuum-cleaners.jpeg" alt="Aspirateurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Aspirateurs</h3>
-                <p>Aspirateurs industriels puissants, capables de nettoyer efficacement les débris, la poussière et autres résidus sur les chantiers.</p>
+                <img src="images/vacuum-cleaners.jpeg" alt="Aspirateurs" class="w-full h-48 object-cover mb-4 transition-transform duration-300 ease-in-out hover:scale-105">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Aspirateurs</h3>
+                <p class="mb-4">Aspirateurs industriels puissants, capables de nettoyer efficacement les débris, la poussière et autres résidus sur les chantiers.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="aspirateurs">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="aspirateurs">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Welding and Cutting Section -->
 <section id="welding-cutting" class="py-16 bg-navy">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-5xl font-bold mb-12 text-gold">Soudage et Découpage</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Matériel de soudure à l’arc -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/arc-welding-equipment.jpeg" alt="Matériel de soudure à l’arc" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Matériel de soudure à l’arc</h3>
-                <p>Équipement de soudure à l'arc conçu pour garantir des soudures solides et durables, adapté aux applications industrielles.</p>
+                <img src="images/arc-welding-equipment.jpeg" alt="Matériel de soudure à l’arc" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Matériel de soudure à l’arc</h3>
+                <p class="mb-4">Équipement de soudure à l'arc conçu pour garantir des soudures solides et durables, adapté aux applications industrielles.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="materiel-soudure-arc">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="materiel-soudure-arc">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Postes statiques courant alternatif et continu -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/static-welding-stations.jpeg" alt="Postes statiques courant alternatif et continu" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Postes statiques courant alternatif et continu</h3>
-                <p>Postes de soudure statiques, disponibles en courant alternatif et continu, pour des soudures stables et efficaces.</p>
+                <img src="images/static-welding-stations.jpeg" alt="Postes statiques courant alternatif et continu" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Postes statiques courant alternatif et continu</h3>
+                <p class="mb-4">Postes de soudure statiques, disponibles en courant alternatif et continu, pour des soudures stables et efficaces.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <select class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="postes-statiques-type">
+                        <option value="ca">Courant Alternatif (CA)</option>
+                        <option value="cc">Courant Continu (CC)</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="postes-statiques-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="postes-statiques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Postes semi-automatiques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/semi-automatic-stations.jpeg" alt="Postes semi-automatiques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Postes semi-automatiques</h3>
-                <p>Stations de soudure semi-automatiques pour des soudures plus rapides, améliorant la productivité sur les grandes séries.</p>
+                <img src="images/semi-automatic-stations.jpeg" alt="Postes semi-automatiques" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Postes semi-automatiques</h3>
+                <p class="mb-4">Stations de soudure semi-automatiques pour des soudures plus rapides, améliorant la productivité sur les grandes séries.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="postes-semi-automatiques">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="postes-semi-automatiques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Groupes autonomes de soudage -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/autonomous-welding-groups.jpeg" alt="Groupes autonomes de soudage" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Groupes autonomes de soudage</h3>
-                <p>Groupes de soudage autonomes, parfaits pour les environnements de travail sans accès direct à l'électricité.</p>
+                <img src="images/autonomous-welding-groups.jpeg" alt="Groupes autonomes de soudage" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Groupes autonomes de soudage</h3>
+                <p class="mb-4">Groupes de soudage autonomes, parfaits pour les environnements de travail sans accès direct à l'électricité.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="groupes-autonomes-soudage">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="groupes-autonomes-soudage">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Soudeuses par points -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/spot-welders.jpeg" alt="Soudeuses par points" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Soudeuses par points</h3>
-                <p>Soudeuses par points pour réaliser des soudures précises et localisées, adaptées à la production en série.</p>
+                <img src="images/spot-welders.jpeg" alt="Soudeuses par points" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Soudeuses par points</h3>
+                <p class="mb-4">Soudeuses par points pour réaliser des soudures précises et localisées, adaptées à la production en série.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="soudeuses-par-points">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="soudeuses-par-points">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Électrodes 6013, 7018, 304 L, 309 L, 316 L -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/electrodes.jpeg" alt="Électrodes 6013, 7018, 304 L, 309 L, 316 L" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Électrodes 6013, 7018, 304 L, 309 L, 316 L</h3>
-                <p>Électrodes de soudure variées, adaptées à des matériaux et conditions spécifiques pour des soudures robustes et de qualité.</p>
+                <img src="images/electrodes.jpeg" alt="Électrodes 6013, 7018, 304 L, 309 L, 316 L" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Électrodes</h3>
+                <p class="mb-4">Électrodes de soudure variées, adaptées à des matériaux et conditions spécifiques pour des soudures robustes et de qualité.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="electrodes-type">
+                        <option value="6013">6013</option>
+                        <option value="7018">7018</option>
+                        <option value="304L">304 L</option>
+                        <option value="309L">309 L</option>
+                        <option value="316L">316 L</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="electrodes-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="electrodes">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product File pour soudage automatique -->
+            <!-- Product Fil pour soudage automatique -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/automatic-welding-wire.jpeg" alt="File pour soudage automatique" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">File pour soudage automatique</h3>
-                <p>Fil de soudure automatique (nertalic), utilisé pour les systèmes de soudure automatisée, garantissant des soudures propres et uniformes.</p>
+                <img src="images/automatic-welding-wire.jpeg" alt="Fil pour soudage automatique" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Fil pour soudage automatique</h3>
+                <p class="mb-4">Fil de soudure automatique (nertalic), utilisé pour les systèmes de soudure automatisée, garantissant des soudures propres et uniformes.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-48 p-2 bg-white text-navy rounded-lg" data-product-id="fil-soudage-type">
+                        <option value="nertalic">Nertalic</option>
+                        <!-- Add other types if applicable -->
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="fil-soudage-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="fil-soudage">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Accessoires: masques, lunettes, tables, pinces de masse, pinces porte-électrodes -->
+            <!-- Product Accessoires de soudure -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/welding-accessories.jpeg" alt="Accessoires: masques, lunettes, tables, pinces de masse, pinces porte-électrodes" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Accessoires de soudure</h3>
-                <p>Accessoires essentiels pour la soudure, incluant masques, lunettes, tables de soudure, pinces de masse et porte-électrodes.</p>
+                <img src="images/welding-accessories.jpeg" alt="Accessoires de soudure" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Accessoires de soudure</h3>
+                <p class="mb-4">Accessoires essentiels pour la soudure, incluant masques, lunettes, tables de soudure, pinces de masse et porte-électrodes.</p>
+                <!-- List of Accessories with Checkboxes and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-masque" id="accessoire-masque">
+                        <label for="accessoire-masque" class="text-white">Masques</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-lunettes" id="accessoire-lunettes">
+                        <label for="accessoire-lunettes" class="text-white">Lunettes</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-table" id="accessoire-table">
+                        <label for="accessoire-table" class="text-white">Tables de soudure</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-pince-masse" id="accessoire-pince-masse">
+                        <label for="accessoire-pince-masse" class="text-white">Pinces de masse</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-porte-electrode" id="accessoire-porte-electrode">
+                        <label for="accessoire-porte-electrode" class="text-white">Pinces porte-électrodes</label>
+                    </div>
+                    <!-- Add to Cart Button -->
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 mt-4" data-product-id="accessoires-soudure">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Matériel de soudure à gaz -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/gas-welding-equipment.jpeg" alt="Matériel de soudure à gaz" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Matériel de soudure à gaz</h3>
-                <p>Équipement de soudure à gaz conçu pour des travaux précis et sûrs sur des matériaux divers.</p>
+                <img src="images/gas-welding-equipment.jpeg" alt="Matériel de soudure à gaz" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Matériel de soudure à gaz</h3>
+                <p class="mb-4">Équipement de soudure à gaz conçu pour des travaux précis et sûrs sur des matériaux divers.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-48 p-2 bg-white text-navy rounded-lg" data-product-id="materiel-soudure-gaz-type">
+                        <option value="chalumeau-gaz">Chalumeau à gaz</option>
+                        <option value="regulateur-gaz">Régulateur de gaz</option>
+                        <!-- Add other types if applicable -->
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="materiel-soudure-gaz-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="materiel-soudure-gaz">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chalumeaux soudeurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/welding-torches.jpeg" alt="Chalumeaux soudeurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chalumeaux soudeurs</h3>
-                <p>Chalumeaux de soudage performants pour des soudures précises et fiables sur une variété de métaux.</p>
+                <img src="images/welding-torches.jpeg" alt="Chalumeaux soudeurs" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chalumeaux soudeurs</h3>
+                <p class="mb-4">Chalumeaux de soudage performants pour des soudures précises et fiables sur une variété de métaux.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="chalumeaux-soudeurs">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chalumeaux-soudeurs">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chalumeaux coupeurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/cutting-torches.jpeg" alt="Chalumeaux coupeurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chalumeaux coupeurs</h3>
-                <p>Chalumeaux coupeurs pour découper des matériaux épais avec une grande précision et une finition nette.</p>
+                <img src="images/cutting-torches.jpeg" alt="Chalumeaux coupeurs" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chalumeaux coupeurs</h3>
+                <p class="mb-4">Chalumeaux coupeurs pour découper des matériaux épais avec une grande précision et une finition nette.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="chalumeaux-coupeurs">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chalumeaux-coupeurs">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Coffrets chalumeaux et accessoires -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/torch-sets-accessories.jpeg" alt="Coffrets chalumeaux et accessoires" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Coffrets chalumeaux et accessoires</h3>
-                <p>Coffrets complets de chalumeaux avec accessoires pour la soudure et la découpe, garantissant des performances fiables.</p>
+                <img src="images/torch-sets-accessories.jpeg" alt="Coffrets chalumeaux et accessoires" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Coffrets chalumeaux et accessoires</h3>
+                <p class="mb-4">Coffrets complets de chalumeaux avec accessoires pour la soudure et la découpe, garantissant des performances fiables.</p>
+                <!-- List of Accessories with Checkboxes and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="coffret-chalumeau" id="coffret-chalumeau">
+                        <label for="coffret-chalumeau" class="text-white">Coffret chalumeau</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-buses" id="accessoire-buses">
+                        <label for="accessoire-buses" class="text-white">Buses</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="accessoire-tuyaux" id="accessoire-tuyaux">
+                        <label for="accessoire-tuyaux" class="text-white">Tuyaux</label>
+                    </div>
+                    <!-- Add to Cart Button -->
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 mt-4" data-product-id="coffrets-chalumeaux-accessoires">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
@@ -569,114 +887,257 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Palans manuels et électriques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/manual-electric-hoists.jpeg" alt="Palans manuels et électriques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Palans manuels et électriques</h3>
-                <p>Palans manuels et électriques robustes, conçus pour des opérations de levage sécurisées et efficaces.</p>
+                <img src="images/manual-electric-hoists.jpeg" alt="Palans manuels et électriques" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Palans manuels et électriques</h3>
+                <p class="mb-4">Palans manuels et électriques robustes, conçus pour des opérations de levage sécurisées et efficaces.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <select class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="palans-type">
+                        <option value="manuel">Palan Manuel</option>
+                        <option value="electrique">Palan Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="palans-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="palans-manuels-electriques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chariots porte-palans -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/hoist-carriers.jpeg" alt="Chariots porte-palans" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chariots porte-palans</h3>
-                <p>Chariots robustes pour porter les palans et garantir une distribution de charge uniforme lors des opérations de levage.</p>
+                <img src="images/hoist-carriers.jpeg" alt="Chariots porte-palans" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chariots porte-palans</h3>
+                <p class="mb-4">Chariots robustes pour porter les palans et garantir une distribution de charge uniforme lors des opérations de levage.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="chariots-porte-palans">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chariots-porte-palans">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Moufle de poulies -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/pulley-blocks.jpeg" alt="Moufle de poulies" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Moufle de poulies</h3>
-                <p>Poulies pour multiplier la force de levage, idéales pour des opérations industrielles de manutention lourde.</p>
+                <img src="images/pulley-blocks.jpeg" alt="Moufle de poulies" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Moufle de poulies</h3>
+                <p class="mb-4">Poulies pour multiplier la force de levage, idéales pour des opérations industrielles de manutention lourde.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="moufle-poulies-type">
+                        <option value="simple">Simple</option>
+                        <option value="double">Double</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="moufle-poulies-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="moufle-poulies">Ajouter au Panier</button>
+                </div>
             </div>
 
-            <!-- Product Cric hydrauliques -->
+            <!-- Product Crics hydrauliques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/hydraulic-jacks.jpeg" alt="Cric hydrauliques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cric hydrauliques</h3>
-                <p>Cric hydrauliques puissants pour lever des charges lourdes avec une grande précision et facilité.</p>
+                <img src="images/hydraulic-jacks.jpeg" alt="Crics hydrauliques" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Crics hydrauliques</h3>
+                <p class="mb-4">Crics hydrauliques puissants pour lever des charges lourdes avec une grande précision et facilité.</p>
+                <!-- Capacity Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="crics-hydrauliques-capacite">
+                        <option value="5t">5 Tonnes</option>
+                        <option value="10t">10 Tonnes</option>
+                        <!-- Add other capacities if applicable -->
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="crics-hydrauliques-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="crics-hydrauliques">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Tireforts -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/tirfor-hoists.jpeg" alt="Tireforts" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Tireforts</h3>
-                <p>Dispositifs de traction et de levage, parfaits pour le tirage de charges lourdes ou les opérations de manutention.</p>
+                <img src="images/tirfor-hoists.jpeg" alt="Tireforts" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Tireforts</h3>
+                <p class="mb-4">Dispositifs de traction et de levage, parfaits pour le tirage de charges lourdes ou les opérations de manutention.</p>
+                <!-- Model Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-48 p-2 bg-white text-navy rounded-lg" data-product-id="tireforts-modele">
+                        <option value="tirefort-1.6t">1.6 Tonnes</option>
+                        <option value="tirefort-3.2t">3.2 Tonnes</option>
+                        <!-- Add other models if applicable -->
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="tireforts-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="tireforts">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Câbles d’acier -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/steel-cables.jpeg" alt="Câbles d’acier" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Câbles d’acier</h3>
-                <p>Câbles d'acier résistants, utilisés pour diverses applications de levage et de traction.</p>
+                <img src="images/steel-cables.jpeg" alt="Câbles d’acier" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Câbles d’acier</h3>
+                <p class="mb-4">Câbles d'acier résistants, utilisés pour diverses applications de levage et de traction.</p>
+                <!-- Diameter Selector, Length Input, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="cables-acier-diametre">
+                        <option value="8mm">8 mm</option>
+                        <option value="10mm">10 mm</option>
+                        <option value="12mm">12 mm</option>
+                        <!-- Add other diameters if applicable -->
+                    </select>
+                    <input type="text" placeholder="Longueur (m)" class="quantity-input w-24 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="cables-acier-longueur">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="cables-acier">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Crochets de levage -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/lifting-hooks.jpeg" alt="Crochets de levage" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Crochets de levage</h3>
-                <p>Crochets de levage résistants pour la manutention et le transport sécurisé de charges lourdes.</p>
+                <img src="images/lifting-hooks.jpeg" alt="Crochets de levage" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Crochets de levage</h3>
+                <p class="mb-4">Crochets de levage résistants pour la manutention et le transport sécurisé de charges lourdes.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="crochets-levage-type">
+                        <option value="simple">Simple</option>
+                        <option value="securite">Avec Sécurité</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="crochets-levage-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="crochets-levage">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Cordes sisal et synthétiques -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/sisal-synthetic-ropes.jpeg" alt="Cordes sisal et synthétiques" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Cordes sisal et synthétiques</h3>
-                <p>Cordes en sisal et matériaux synthétiques, offrant une forte résistance pour les applications de levage et de transport.</p>
+                <img src="images/sisal-synthetic-ropes.jpeg" alt="Cordes sisal et synthétiques" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Cordes sisal et synthétiques</h3>
+                <p class="mb-4">Cordes en sisal et matériaux synthétiques, offrant une forte résistance pour les applications de levage et de transport.</p>
+                <!-- Material Selector, Length Input, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="cordes-materiau">
+                        <option value="sisal">Sisal</option>
+                        <option value="synthetique">Synthétique</option>
+                    </select>
+                    <input type="text" placeholder="Longueur (m)" class="quantity-input w-24 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="cordes-longueur">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="cordes">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Serre câbles, manilles -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/cable-clamps-shackles.jpeg" alt="Serre câbles, manilles" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Serre câbles, manilles</h3>
-                <p>Accessoires robustes pour la fixation et la sécurisation des câbles et charges lors des opérations de levage.</p>
+                <img src="images/cable-clamps-shackles.jpeg" alt="Serre câbles, manilles" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Serre câbles, manilles</h3>
+                <p class="mb-4">Accessoires robustes pour la fixation et la sécurisation des câbles et charges lors des opérations de levage.</p>
+                <!-- List of Accessories with Checkboxes and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="serre-cables" id="serre-cables">
+                        <label for="serre-cables" class="text-white">Serre-câbles</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="checkbox" class="mr-2" data-product-id="manilles" id="manilles">
+                        <label for="manilles" class="text-white">Manilles</label>
+                    </div>
+                    <!-- Quantity Input -->
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mt-2" data-product-id="accessoires-levage-quantity">
+                    <!-- Add to Cart Button -->
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 mt-2" data-product-id="accessoires-levage">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Élingues à chaîne et câble -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/chain-cable-slings.jpeg" alt="Élingues à chaîne et câble" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Élingues à chaîne et câble</h3>
-                <p>Élingues en chaîne et câble pour des opérations de levage fiables et sécurisées, même dans des environnements exigeants.</p>
+                <img src="images/chain-cable-slings.jpeg" alt="Élingues à chaîne et câble" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Élingues à chaîne et câble</h3>
+                <p class="mb-4">Élingues en chaîne et câble pour des opérations de levage fiables et sécurisées, même dans des environnements exigeants.</p>
+                <!-- Type Selector, Length Input, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="elingues-type">
+                        <option value="chaine">Chaîne</option>
+                        <option value="cable">Câble</option>
+                    </select>
+                    <input type="text" placeholder="Longueur (m)" class="quantity-input w-24 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="elingues-longueur">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="elingues">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Sangle de manutention plate et ronde -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/handling-straps.jpeg" alt="Sangle de manutention plate et ronde" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Sangle de manutention plate et ronde</h3>
-                <p>Sangles plates et rondes pour une manutention sécurisée et efficace dans une variété de scénarios industriels.</p>
+                <img src="images/handling-straps.jpeg" alt="Sangle de manutention plate et ronde" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Sangle de manutention plate et ronde</h3>
+                <p class="mb-4">Sangles plates et rondes pour une manutention sécurisée et efficace dans une variété de scénarios industriels.</p>
+                <!-- Type Selector, Length Input, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="sangles-type">
+                        <option value="plate">Plate</option>
+                        <option value="ronde">Ronde</option>
+                    </select>
+                    <input type="text" placeholder="Longueur (m)" class="quantity-input w-24 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="sangles-longueur">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="sangles">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Chariots élévateurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/forklifts.jpeg" alt="Chariots élévateurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Chariots élévateurs</h3>
-                <p>Chariots élévateurs performants, idéaux pour les opérations de levage et transport en milieu industriel.</p>
+                <img src="images/forklifts.jpeg" alt="Chariots élévateurs" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Chariots élévateurs</h3>
+                <p class="mb-4">Chariots élévateurs performants, idéaux pour les opérations de levage et transport en milieu industriel.</p>
+                <!-- Model Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <select class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="chariots-elevateurs-modele">
+                        <option value="electrique">Électrique</option>
+                        <option value="diesel">Diesel</option>
+                        <!-- Add other models if applicable -->
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="chariots-elevateurs-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="chariots-elevateurs">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Gerbeurs -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/stackers.jpeg" alt="Gerbeurs" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Gerbeurs</h3>
-                <p>Gerbeurs robustes pour empiler et organiser efficacement les matériaux en hauteur.</p>
+                <img src="images/stackers.jpeg" alt="Gerbeurs" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Gerbeurs</h3>
+                <p class="mb-4">Gerbeurs robustes pour empiler et organiser efficacement les matériaux en hauteur.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <select class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="gerbeurs-type">
+                        <option value="manuel">Manuel</option>
+                        <option value="electrique">Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="gerbeurs-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="gerbeurs">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Transpalettes -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/pallet-trucks.jpeg" alt="Transpalettes" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Transpalettes</h3>
-                <p>Transpalettes fiables et faciles à manœuvrer pour déplacer des charges lourdes dans un environnement de travail exigeant.</p>
+                <img src="images/pallet-trucks.jpeg" alt="Transpalettes" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Transpalettes</h3>
+                <p class="mb-4">Transpalettes fiables et faciles à manœuvrer pour déplacer des charges lourdes dans un environnement de travail exigeant.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex flex-col items-start mt-4">
+                    <select class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="transpalettes-type">
+                        <option value="manuel">Manuel</option>
+                        <option value="electrique">Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-full p-2 bg-white text-navy rounded-lg mb-2" data-product-id="transpalettes-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy w-full px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="transpalettes">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Diables pour caisses -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/box-dollies.jpeg" alt="Diables pour caisses" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Diables pour caisses</h3>
-                <p>Diables spécialement conçus pour le transport rapide et sûr des caisses et autres charges volumineuses.</p>
+                <img src="images/box-dollies.jpeg" alt="Diables pour caisses" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Diables pour caisses</h3>
+                <p class="mb-4">Diables spécialement conçus pour le transport rapide et sûr des caisses et autres charges volumineuses.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="diables-caisses">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="diables-caisses">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Diables pour fûts -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/drum-dollies.jpeg" alt="Diables pour fûts" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Diables pour fûts</h3>
-                <p>Diables pour transporter et manipuler facilement des fûts lourds et encombrants dans des environnements industriels.</p>
+                <img src="images/drum-dollies.jpeg" alt="Diables pour fûts" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Diables pour fûts</h3>
+                <p class="mb-4">Diables pour transporter et manipuler facilement des fûts lourds et encombrants dans des environnements industriels.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg" data-product-id="diables-futs">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500" data-product-id="diables-futs">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
@@ -687,72 +1148,168 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Product Pilonneuse -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/rammer.jpeg" alt="Pilonneuse" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Pilonneuse</h3>
-                <p>Pilonneuse robuste pour compacter efficacement les sols et préparer les surfaces pour la construction.</p>
+                <img src="images/rammer.jpeg" alt="Pilonneuse" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Pilonneuse</h3>
+                <p class="mb-4">Pilonneuse robuste pour compacter efficacement les sols et préparer les surfaces pour la construction.</p>
+                <!-- Quantity Selector and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="pilonneuse-type">
+                        <option value="essence">Essence</option>
+                        <option value="electrique">Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="pilonneuse-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="pilonneuse">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Compacteur -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/compactor.jpeg" alt="Compacteur" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Compacteur</h3>
-                <p>Compacteur puissant pour des opérations de compactage sur les chantiers de construction et d'infrastructure.</p>
+                <img src="images/compactor.jpeg" alt="Compacteur" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Compacteur</h3>
+                <p class="mb-4">Compacteur puissant pour des opérations de compactage sur les chantiers de construction et d'infrastructure.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="compacteur-type">
+                        <option value="vibrant">Vibrant</option>
+                        <option value="a-rouleaux">À rouleaux</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="compacteur-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="compacteur">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Scie à sol -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/floor-saw.jpeg" alt="Scie à sol" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Scie à sol</h3>
-                <p>Scie à sol performante pour la découpe précise de béton et d'autres matériaux de construction durs.</p>
+                <img src="images/floor-saw.jpeg" alt="Scie à sol" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Scie à sol</h3>
+                <p class="mb-4">Scie à sol performante pour la découpe précise de béton et d'autres matériaux de construction durs.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="scie-sol-type">
+                        <option value="essence">Essence</option>
+                        <option value="electrique">Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="scie-sol-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="scie-sol">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Lisseuse béton -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/concrete-smoother.jpeg" alt="Lisseuse béton" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Lisseuse béton</h3>
-                <p>Lisseuse pour béton, conçue pour créer des finitions lisses et parfaites sur les surfaces en béton.</p>
+                <img src="images/concrete-smoother.jpeg" alt="Lisseuse béton" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Lisseuse béton</h3>
+                <p class="mb-4">Lisseuse pour béton, conçue pour créer des finitions lisses et parfaites sur les surfaces en béton.</p>
+                <!-- Diameter Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="lisseuse-beton-diametre">
+                        <option value="60cm">60 cm</option>
+                        <option value="90cm">90 cm</option>
+                        <option value="120cm">120 cm</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="lisseuse-beton-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="lisseuse-beton">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Groupe électrogène -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/generator-set.jpeg" alt="Groupe électrogène" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Groupe électrogène</h3>
-                <p>Générateurs fiables pour fournir une alimentation électrique constante sur les chantiers de construction.</p>
+                <img src="images/generator-set.jpeg" alt="Groupe électrogène" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Groupe électrogène</h3>
+                <p class="mb-4">Générateurs fiables pour fournir une alimentation électrique constante sur les chantiers de construction.</p>
+                <!-- Power Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="groupe-electrogene-puissance">
+                        <option value="5kw">5 kW</option>
+                        <option value="10kw">10 kW</option>
+                        <option value="15kw">15 kW</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="groupe-electrogene-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="groupe-electrogene">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Compresseur -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/compressor.jpeg" alt="Compresseur" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Compresseur</h3>
-                <p>Compresseurs puissants pour alimenter une large gamme d'outils pneumatiques et équipements de chantier.</p>
+                <img src="images/compressor.jpeg" alt="Compresseur" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Compresseur</h3>
+                <p class="mb-4">Compresseurs puissants pour alimenter une large gamme d'outils pneumatiques et équipements de chantier.</p>
+                <!-- Capacity Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="compresseur-capacite">
+                        <option value="100l">100 Litres</option>
+                        <option value="200l">200 Litres</option>
+                        <option value="300l">300 Litres</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="compresseur-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="compresseur">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Vibreur essence / électrique -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/gas-electric-vibrator.jpeg" alt="Vibreur essence / électrique" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Vibreur essence / électrique</h3>
-                <p>Vibreur de béton, disponible en versions essence et électrique, pour améliorer la qualité et la densité du béton coulé.</p>
+                <img src="images/gas-electric-vibrator.jpeg" alt="Vibreur essence / électrique" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Vibreur essence / électrique</h3>
+                <p class="mb-4">Vibreur de béton, disponible en versions essence et électrique, pour améliorer la qualité et la densité du béton coulé.</p>
+                <!-- Type Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-48 p-2 bg-white text-navy rounded-lg" data-product-id="vibreur-type">
+                        <option value="essence">Essence</option>
+                        <option value="electrique">Électrique</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="vibreur-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="vibreur">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Aiguilles de vibreur -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/vibrator-needles.jpeg" alt="Aiguilles de vibreur" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Aiguilles de vibreur</h3>
-                <p>Aiguilles de vibreur de haute qualité pour améliorer l'homogénéité du béton lors de son coulage.</p>
+                <img src="images/vibrator-needles.jpeg" alt="Aiguilles de vibreur" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Aiguilles de vibreur</h3>
+                <p class="mb-4">Aiguilles de vibreur de haute qualité pour améliorer l'homogénéité du béton lors de son coulage.</p>
+                <!-- Diameter Selector, Length Input, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="aiguilles-diametre">
+                        <option value="25mm">25 mm</option>
+                        <option value="38mm">38 mm</option>
+                        <option value="50mm">50 mm</option>
+                    </select>
+                    <input type="text" placeholder="Longueur (m)" class="quantity-input w-24 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="aiguilles-longueur">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="aiguilles-vibreur">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Mixeur de béton -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/concrete-mixer.jpeg" alt="Mixeur de béton" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Mixeur de béton</h3>
-                <p>Mélangeurs de béton efficaces pour préparer des mélanges homogènes sur les chantiers de construction.</p>
+                <img src="images/concrete-mixer.jpeg" alt="Mixeur de béton" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Mixeur de béton</h3>
+                <p class="mb-4">Mélangeurs de béton efficaces pour préparer des mélanges homogènes sur les chantiers de construction.</p>
+                <!-- Capacity Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-40 p-2 bg-white text-navy rounded-lg" data-product-id="mixeur-capacite">
+                        <option value="140l">140 Litres</option>
+                        <option value="180l">180 Litres</option>
+                        <option value="250l">250 Litres</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="mixeur-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="mixeur-beton">Ajouter au Panier</button>
+                </div>
             </div>
 
             <!-- Product Moto pompe thermique -->
             <div class="product-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                <img src="images/thermal-motor-pump.jpeg" alt="Moto pompe thermique" class="w-full h-48 object-cover mb-4 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Moto pompe thermique</h3>
-                <p>Pompes thermiques puissantes pour des applications de pompage d'eau ou de liquides sur des sites de construction.</p>
+                <img src="images/thermal-motor-pump.jpeg" alt="Moto pompe thermique" class="w-full h-48 object-cover mb-4 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-2 text-gold">Moto pompe thermique</h3>
+                <p class="mb-4">Pompes thermiques puissantes pour des applications de pompage d'eau ou de liquides sur des sites de construction.</p>
+                <!-- Diameter Selector, Quantity Selector, and Add to Cart Button -->
+                <div class="flex items-center justify-between mt-4">
+                    <select class="quantity-input w-32 p-2 bg-white text-navy rounded-lg" data-product-id="moto-pompe-diametre">
+                        <option value="2pouces">2 Pouces</option>
+                        <option value="3pouces">3 Pouces</option>
+                        <option value="4pouces">4 Pouces</option>
+                    </select>
+                    <input type="number" min="1" value="1" class="quantity-input w-16 p-2 bg-white text-navy rounded-lg ml-2" data-product-id="moto-pompe-quantity">
+                    <button class="add-to-cart-button bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500 ml-2" data-product-id="moto-pompe-thermique">Ajouter au Panier</button>
+                </div>
             </div>
         </div>
     </div>
@@ -770,6 +1327,19 @@
             <p id="more-products-note" class="text-gold mt-4 hidden">Cette liste de produits n'est pas exhaustive. Vous pouvez obtenir ce dont vous avez besoin par notre intermédiaire et bénéficier de notre chaîne d'approvisionnement et de nos partenariats.</p>
         </div>
     </section>
+    <!-- Cart Modal -->
+<div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+    <div class="bg-white text-navy rounded-lg p-6 w-11/12 md:w-1/2">
+        <h2 class="text-2xl font-bold mb-4">Votre Panier</h2>
+        <div id="cart-items" class="space-y-4">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="flex justify-between items-center mt-6">
+            <button id="close-cart" class="bg-gray-300 text-navy px-4 py-2 rounded-lg">Continuer vos achats</button>
+            <button id="checkout-button" class="bg-gold text-navy px-4 py-2 rounded-lg font-semibold hover:bg-yellow-500">Passer à la caisse</button>
+        </div>
+    </div>
+</div>
                     
                     <script>
                         document.getElementById("show-more").addEventListener("click", function() {
