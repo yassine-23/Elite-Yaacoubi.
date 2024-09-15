@@ -1,26 +1,26 @@
 <?php
-// Check if the form is submitted
+// Check if the form is submitted using POST method
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect and sanitize form inputs
-    $name = htmlspecialchars(strip_tags(trim($_POST["name"])));
-    $email = htmlspecialchars(strip_tags(trim($_POST["email"])));
-    $message = htmlspecialchars(strip_tags(trim($_POST["message"])));
+    $name = trim($_POST["name"]);
+    $email = trim($_POST["email"]);
+    $message = trim($_POST["message"]);
 
     // Validate form data
     if (!empty($name) && !empty($email) && !empty($message)) {
         // Email settings
         $to = "elite.yacobi@gmail.com"; // Replace with your email address
-        $subject = "New Contact Form Submission from " . $name;
-        $headers = "From: " . $email . "\r\n";
-        $headers .= "Reply-To: " . $email . "\r\n";
+        $subject = "New Contact Form Submission from " . htmlspecialchars($name);
+        $headers = "From: " . htmlspecialchars($email) . "\r\n";
+        $headers .= "Reply-To: " . htmlspecialchars($email) . "\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
         // Email body
         $body = "You have received a new message from your website contact form.\n\n";
         $body .= "Here are the details:\n";
-        $body .= "Name: " . $name . "\n";
-        $body .= "Email: " . $email . "\n";
-        $body .= "Message:\n" . $message . "\n";
+        $body .= "Name: " . htmlspecialchars($name) . "\n";
+        $body .= "Email: " . htmlspecialchars($email) . "\n";
+        $body .= "Message:\n" . htmlspecialchars($message) . "\n";
 
         // Send email
         if (mail($to, $subject, $body, $headers)) {
@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Please fill in all fields.";
     }
 } else {
-    echo "There was a problem with your submission. Please try again.";
+    // If the form was not submitted via POST
+    echo "Invalid request method.";
 }
 ?>
