@@ -1433,33 +1433,34 @@
         </section>
 
         <section id="contact" class="py-16 bg-navy">
-            <div class="container mx-auto px-4">
-                <h2 class="text-5xl font-bold mb-12 text-center text-gold">Contactez-nous</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
-                        <h3 class="text-2xl font-semibold mb-4 text-gold">Adresse</h3>
-                        <p>123 Rue de l'Innovation, Casablanca, Maroc</p>
-                    </div>
-                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
-                        <h3 class="text-2xl font-semibold mb-4 text-gold">Téléphone</h3>
-                        <p>+212 6 12 34 56 78</p>
-                    </div>
-                    <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.4s;">
-                        <h3 class="text-2xl font-semibold mb-4 text-gold">Email</h3>
-                        <p>contact@eliteyaacoubi.com</p>
-                    </div>
-                </div>
-                <form action="#" method="post" class="mt-12 space-y-6 animate-fade-in" style="animation-delay: 0.6s;">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" name="name" placeholder="Votre Nom" class="bg-white bg-opacity-20 p-3 rounded-lg">
-                        <input type="email" name="email" placeholder="Votre Email" class="bg-white bg-opacity-20 p-3 rounded-lg">
-                    </div>
-                    <input type="text" name="subject" placeholder="Objet" class="bg-white bg-opacity-20 p-3 rounded-lg w-full">
-                    <textarea name="message" rows="6" placeholder="Votre Message" class="bg-white bg-opacity-20 p-3 rounded-lg w-full"></textarea>
-                    <button type="submit" class="cta-button px-8 py-3 rounded-full text-lg font-semibold">Envoyer</button>
-                </form>
+    <div class="container mx-auto px-4">
+        <h2 class="text-5xl font-bold mb-12 text-center text-gold">Contactez-nous</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Adresse</h3>
+                <p>123 Rue de l'Innovation, Casablanca, Maroc</p>
             </div>
-        </section>
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.2s;">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Téléphone</h3>
+                <p>+212 6 12 34 56 78</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in" style="animation-delay: 0.4s;">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Email</h3>
+                <p>contact@eliteyaacoubi.com</p>
+            </div>
+        </div>
+        <!-- Updated Form -->
+        <form action="contact.php" method="post" class="mt-12 space-y-6 animate-fade-in" style="animation-delay: 0.6s;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Votre Nom" required class="bg-white bg-opacity-20 p-3 rounded-lg">
+                <input type="email" name="email" placeholder="Votre Email" required class="bg-white bg-opacity-20 p-3 rounded-lg">
+            </div>
+            <input type="text" name="subject" placeholder="Objet" required class="bg-white bg-opacity-20 p-3 rounded-lg w-full">
+            <textarea name="message" rows="6" placeholder="Votre Message" required class="bg-white bg-opacity-20 p-3 rounded-lg w-full"></textarea>
+            <button type="submit" class="cta-button px-8 py-3 rounded-full text-lg font-semibold">Envoyer</button>
+        </form>
+    </div>
+</section>
     </main>
 
     <footer class="bg-navy py-6">
