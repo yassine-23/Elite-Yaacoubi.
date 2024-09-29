@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate form data
     if (!empty($name) && !empty($email) && !empty($message)) {
         // Email settings
-        $to = "yassinedrani23@gmail.com"; // Replace with your email address
+        $to = "contact@eliteyaacoubi.com"; // Replace with your email address
         $subject = "New Contact Form Submission from " . htmlspecialchars($name);
         $headers = "From: " . htmlspecialchars($email) . "\r\n";
         $headers .= "Reply-To: " . htmlspecialchars($email) . "\r\n";
