@@ -202,33 +202,57 @@
             </div>
         </section>
     </di>
- <!-- New Section: Travaux en Bâtiment -->
+<!-- New Section: Travaux en Bâtiment -->
 <section id="batiment" class="py-16 bg-navy">
     <div class="container mx-auto px-4">
-        <!-- Section Heading -->
-        <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Travaux en Bâtiment</h2>
+        <!-- Centered Section Heading with enhanced styling -->
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-gold section-heading inline-block relative">
+                Travaux en Bâtiment
+                <button id="learn-more-btn" class="ml-4 text-sm bg-gold text-navy px-4 py-2 rounded-full hover:bg-opacity-90 transition-all duration-300">
+                    En savoir plus
+                </button>
+            </h2>
+        </div>
+
+        <!-- Modal/Popup -->
+        <div id="info-modal" class="fixed inset-0 bg-navy bg-opacity-95 hidden z-50 flex items-center justify-center">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-2xl mx-4 relative backdrop-blur-sm">
+                <button id="close-modal" class="absolute top-4 right-4 text-gold hover:text-white transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <h3 class="text-3xl font-bold mb-6 text-gold">Notre Nouvelle Initiative</h3>
+                <div class="text-white space-y-4">
+                    <p>Nous sommes heureux d'annoncer le lancement d'une nouvelle section dédiée exclusivement aux travaux en bâtiment au sein de notre entreprise. Cette initiative vise à renforcer notre expertise dans la construction et la rénovation de bâtiments.</p>
+                    <p>Notre équipe de professionnels expérimentés se consacrera à la réalisation de projets variés, en mettant l'accent sur des normes de qualité élevées et des solutions personnalisées. Nous nous engageons à livrer des constructions durables et fonctionnelles, adaptées aux besoins de nos clients.</p>
+                    <p>Nous sommes convaincus que cette nouvelle section renforcera notre position sur le marché et nous permettra de relever de nouveaux défis. Pour toute information complémentaire, n'hésitez pas à nous contacter.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Featured Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <!-- Structural Construction -->
             <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="images/Frame-Structural-Industrial.jpeg" alt="Construction Structure Métallique" class="w-full h-64 object-cover rounded-lg mb-6">
+                <img src="/api/placeholder/600/400" alt="Structure Métallique" class="w-full h-64 object-cover rounded-lg mb-6">
                 <h3 class="text-3xl font-semibold mb-4 text-gold">Construction Industrielle</h3>
                 <p class="text-white">Expertise en construction de structures métalliques et bâtiments industriels avec les plus hauts standards de qualité.</p>
             </div>
 
             <!-- Roofing Expertise -->
             <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="images/mantenance.jpeg" alt="Expertise Toiture" class="w-full h-64 object-cover rounded-lg mb-6">
+                <img src="/api/placeholder/600/400" alt="Expertise Toiture" class="w-full h-64 object-cover rounded-lg mb-6">
                 <h3 class="text-3xl font-semibold mb-4 text-gold">Solutions de Toiture</h3>
-                <p class="text-white">Installation et maintenance professionnelle de toitures pour tous types de bâtiments commerciaux et résidentiels.</p>
+                <p class="text-white">Installation et maintenance professionnelle de toitures pour tous types de bâtiments.</p>
             </div>
 
             <!-- Architectural Design -->
             <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <img src="images/Projet Résidentiel.jpeg" alt="Design Architectural" class="w-full h-64 object-cover rounded-lg mb-6">
+                <img src="/api/placeholder/600/400" alt="Design Architectural" class="w-full h-64 object-cover rounded-lg mb-6">
                 <h3 class="text-3xl font-semibold mb-4 text-gold">Conception Architecturale</h3>
-                <p class="text-white">De la conception à la réalisation, nous créons des espaces modernes et fonctionnels adaptés à vos besoins.</p>
+                <p class="text-white">De la conception à la réalisation, nous créons des espaces modernes et fonctionnels.</p>
             </div>
         </div>
 
@@ -238,6 +262,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Construction Services -->
                 <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+                    <img src="/api/placeholder/800/400" alt="Services de Construction" class="w-full h-48 object-cover rounded-lg mb-6">
                     <h4 class="text-2xl font-semibold mb-4 text-gold">Construction</h4>
                     <ul class="text-white space-y-2">
                         <li>• Construction de structures métalliques</li>
@@ -249,6 +274,7 @@
 
                 <!-- Design Services -->
                 <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
+                    <img src="/api/placeholder/800/400" alt="Services de Conception" class="w-full h-48 object-cover rounded-lg mb-6">
                     <h4 class="text-2xl font-semibold mb-4 text-gold">Conception</h4>
                     <ul class="text-white space-y-2">
                         <li>• Plans architecturaux détaillés</li>
@@ -258,15 +284,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-
-        <!-- Call to Action -->
-        <div class="mt-16 text-center">
-            <h3 class="text-3xl font-bold mb-6 text-gold">Prêt à Concrétiser Votre Projet ?</h3>
-            <p class="text-white mb-8">Contactez-nous pour une consultation personnalisée et découvrez comment nous pouvons transformer votre vision en réalité.</p>
-            <a href="#contact" class="cta-button px-8 py-4 rounded-full text-lg font-semibold inline-block">
-                Discuter de votre projet
-            </a>
         </div>
     </div>
 </section>
