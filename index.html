@@ -202,113 +202,124 @@
             </div>
         </section>
     </di>
-    <!-- New Section: Travaux en Bâtiment -->
+  <!-- New Section: Travaux en Bâtiment -->
 <section id="batiment" class="py-16 bg-navy">
     <div class="container mx-auto px-4">
-        <!-- Section Heading -->
+        <!-- Section Heading with matching gold underline effect -->
         <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Travaux en Bâtiment</h2>
 
-        <!-- Project Gallery -->
+        <!-- Introduction Box - Matches your About section style -->
+        <div class="flex flex-col items-center mb-16">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg animate-fade-in text-center max-w-3xl">
+                <h3 class="text-3xl font-bold mb-6 text-gold">Notre Expertise en Construction</h3>
+                <p class="text-lg text-white leading-relaxed">
+                    Nous sommes heureux d'annoncer le lancement d'une nouvelle section dédiée exclusivement aux travaux en bâtiment. Notre équipe de professionnels expérimentés se consacre à la réalisation de projets variés, en mettant l'accent sur des normes de qualité élevées et des solutions personnalisées pour chaque client.
+                </p>
+            </div>
+        </div>
+
+        <!-- Project Gallery - Matches your Services section card style -->
         <div class="flex flex-col lg:flex-row justify-center items-center gap-16 mt-16">
-            <!-- Project 1: Residential Project -->
-            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md mx-auto animate-fade-in">
-                <img src="images/Projet Résidentiel.jpeg" alt="Projet Résidentiel" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
+            <!-- Project 1 -->
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auto">
                 <h3 class="text-3xl font-semibold mb-6 text-gold text-center">Projet Résidentiel</h3>
-                <p class="text-white text-center">Un projet résidentiel moderne et fonctionnel livré en 2024.</p>
+                <p class="text-white text-center mb-6">Un projet résidentiel moderne et fonctionnel, alliant esthétique et praticité pour un confort optimal.</p>
+                <div class="mt-8">
+                    <img src="images/Projet Résidentiel.jpeg" alt="Projet Résidentiel" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                </div>
             </div>
-            <!-- Project 2: Commercial Renovation -->
-            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md mx-auto animate-fade-in">
-                <img src="images/mantenance.jpeg" alt="Rénovation Commerciale" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
+
+            <!-- Project 2 -->
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md mx-auto">
                 <h3 class="text-3xl font-semibold mb-6 text-gold text-center">Rénovation Commerciale</h3>
-                <p class="text-white text-center">Rénovation d'un espace commercial avec des matériaux de haute qualité.</p>
+                <p class="text-white text-center mb-6">Transformation complète d'espaces commerciaux avec une attention particulière aux détails et à la fonctionnalité.</p>
+                <div class="mt-8">
+                    <img src="images/mantenance.jpeg" alt="Rénovation Commerciale" class="w-full h-48 object-cover rounded-lg" loading="lazy">
+                </div>
             </div>
-            <!-- Project 3: Commercial Construction -->
-            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md mx-auto animate-fade-in">
-                <img src="images/Frame-Structural-Industrial.jpeg" alt="Construction Commerciale" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
-                <h3 class="text-3xl font-semibold mb-6 text-gold text-center">Construction Commerciale</h3>
-                <p class="text-white text-center">Construction d'espaces commerciaux modernes et fonctionnels.</p>
+        </div>
+
+        <!-- Services Grid - Matches your existing grid layouts -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+            <!-- Service 1 -->
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300">
+                <img src="images/construction-residentielle.jpg" alt="Construction Résidentielle" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Construction Résidentielle</h3>
+                <p class="text-white">Solutions complètes pour la construction de maisons et d'immeubles résidentiels.</p>
             </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300">
+                <img src="images/renovation-commerciale.jpg" alt="Rénovation Commerciale" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Rénovation Commerciale</h3>
+                <p class="text-white">Rénovation et aménagement d'espaces professionnels sur mesure.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300">
+                <img src="images/entretien-reparations.jpg" alt="Maintenance" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
+                <h3 class="text-2xl font-semibold mb-4 text-gold">Maintenance</h3>
+                <p class="text-white">Services d'entretien et de réparation pour une longévité maximale de vos installations.</p>
+            </div>
+        </div>
+
+        <!-- CTA Section - Matches your existing CTA style -->
+        <div class="mt-16 text-center">
+            <a href="#contact" class="cta-button px-8 py-4 rounded-full text-lg font-semibold inline-block">
+                Discuter de votre projet
+            </a>
         </div>
     </div>
 </section>
 
-<!-- Interactive Timeline -->
+<!-- Timeline Section with your color scheme -->
 <section id="timeline" class="py-16 bg-navy">
     <div class="container mx-auto px-4">
         <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Notre Parcours</h2>
-        <div class="timeline-container">
-            <!-- Timeline Item 1: 2021 -->
-            <div class="timeline-item mb-8 animate-fade-in">
-                <div class="timeline-content bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gold">2021</h3>
-                    <p class="text-white">Lancement de notre premier projet de construction résidentielle à Casablanca.</p>
-                </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                <h3 class="text-2xl font-semibold text-gold">2021</h3>
+                <p class="text-white">Lancement de notre division construction avec notre premier projet résidentiel majeur.</p>
             </div>
-            <!-- Timeline Item 2: 2023 -->
-            <div class="timeline-item animate-fade-in">
-                <div class="timeline-content bg-white bg-opacity-10 p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gold">2023</h3>
-                    <p class="text-white">Rénovation d'un bâtiment commercial dans le quartier des affaires de Rabat.</p>
-                </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg animate-fade-in">
+                <h3 class="text-2xl font-semibold text-gold">2023</h3>
+                <p class="text-white">Expansion vers les projets commerciaux et industriels.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services Breakdown -->
-<section id="services-breakdown" class="py-16 bg-navy">
+<!-- Testimonials - Matching your existing card styles -->
+<section id="building-testimonials" class="py-16 bg-navy">
     <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Nos Services en Bâtiment</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1: Construction Résidentielle -->
-            <div class="service-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300 animate-fade-in">
-                <img src="images/construction-residentielle.jpg" alt="Construction Résidentielle" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Construction Résidentielle</h3>
-                <p class="text-white">Nous offrons des solutions complètes pour la construction de maisons et d'immeubles résidentiels.</p>
+        <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Témoignages Clients</h2>
+        <div class="flex flex-col lg:flex-row justify-center items-stretch gap-8">
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg flex-1 max-w-md mx-auto">
+                <p class="text-white mb-6">"Elite Yaacoubi a transformé notre vision en réalité. Leur équipe a fait preuve d'un professionnalisme exemplaire tout au long du projet."</p>
+                <p class="text-gold font-semibold">- Mohammed K., Projet Résidentiel</p>
             </div>
-            <!-- Service 2: Rénovation Commerciale -->
-            <div class="service-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300 animate-fade-in">
-                <img src="images/renovation-commerciale.jpg" alt="Rénovation Commerciale" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Rénovation Commerciale</h3>
-                <p class="text-white">Rénovation et aménagement des espaces de bureaux et locaux commerciaux.</p>
-            </div>
-            <!-- Service 3: Entretien et Réparations -->
-            <div class="service-item bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-gold hover:text-navy transition duration-300 animate-fade-in">
-                <img src="images/entretien-reparations.jpg" alt="Entretien et Réparations" class="w-full h-48 object-cover mb-4 rounded-lg" loading="lazy">
-                <h3 class="text-2xl font-semibold mb-4 text-gold">Entretien et Réparations</h3>
-                <p class="text-white">Service de maintenance et réparation de bâtiments pour garantir leur durabilité.</p>
+            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg flex-1 max-w-md mx-auto">
+                <p class="text-white mb-6">"Une expertise remarquable dans la rénovation commerciale. Ils ont su respecter nos délais tout en maintenant une qualité exceptionnelle."</p>
+                <p class="text-gold font-semibold">- Sophia R., Projet Commercial</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Client Testimonials -->
-<section id="testimonials" class="py-16 bg-navy">
-    <div class="container mx-auto px-4">
-        <h2 class="text-5xl font-bold mb-12 text-center text-gold section-heading">Ce que nos clients disent</h2>
-        <div class="flex flex-col lg:flex-row justify-center items-center gap-16 mt-16">
-            <!-- Testimonial 1 -->
-            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md mx-auto animate-fade-in">
-                <p class="text-white">“Elite Yaacoubi a transformé notre espace commercial en un lieu moderne et fonctionnel. Le projet a été livré dans les délais et avec une qualité exceptionnelle.”</p>
-                <h3 class="text-2xl font-semibold mt-4 text-gold">- Ahmed B., Client</h3>
-            </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-white bg-opacity-10 p-8 rounded-lg shadow-lg max-w-md mx-auto animate-fade-in">
-                <p class="text-white">“La meilleure expérience de construction que nous ayons eue. Ils sont professionnels et leurs solutions sont toujours personnalisées.”</p>
-                <h3 class="text-2xl font-semibold mt-4 text-gold">- Sarah M., Résidentielle</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call-to-Action (CTA) -->
-<section id="cta" class="py-16 bg-gold">
+<!-- Final CTA - Using your gold background -->
+<section class="py-16 bg-gold">
     <div class="container mx-auto px-4 text-center">
-        <h2 class="text-4xl font-bold text-navy mb-6">Besoin d'un conseil en construction ?</h2>
-        <p class="text-navy mb-6">Contactez-nous pour une consultation gratuite et obtenez des solutions sur mesure pour votre projet.</p>
-        <a href="#contact" class="cta-button px-6 py-3 bg-navy text-gold rounded-full text-lg font-semibold">Demandez une consultation gratuite</a>
+        <h2 class="text-4xl font-bold text-navy mb-6">Prêt à concrétiser votre projet ?</h2>
+        <p class="text-navy mb-8">Contactez-nous pour une consultation personnalisée et découvrez comment nous pouvons vous aider.</p>
+        <a href="#contact" class="bg-navy text-gold px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">
+            Commencez votre projet
+        </a>
     </div>
 </section>
+Last edited 4 minutes ago
+
+
+
      <!-- Products Section -->
 <section id="products" class="py-16 bg-navy">
     <div class="container mx-auto px-4 text-center">
