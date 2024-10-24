@@ -249,3 +249,46 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCartItems();
     }
 });
+<!-- JavaScript for Modal -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('info-modal');
+    const openBtn = document.getElementById('learn-more-btn');
+    const closeBtn = document.getElementById('close-modal');
+
+    openBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('animate-fade-in');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+        }
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
